@@ -23,27 +23,31 @@ Modules are loading in an alphabetical order from `/etc/slurm/lua_job_submit_d`.
 
 ## Available example modules
 
-### enrich_comments.lua
+### auto\_onboard.lua
 
-Adds information to admin_comments field. In this example we add info about dependencies, network and switches.
+Adds user into SLURM account if user belongs to appropriate UNIX group.
 
-### gpu_features.lua
+### enrich\_comments.lua
+
+Adds information to admin\_comments field. In this example we add info about dependencies, network and switches.
+
+### gpu\_features.lua
 
 Enable GPU/IB features like MIG, GSP, and SHARP if they are requested (via --feature or --network).
 
-### job_info.lua
+### job\_info.lua
 
 Debug module - prints the job attributes, available via slurm. Please, check which attributes are available in YOUR SLURM version, they may differ.
 
-### require_account.lua
+### require\_account.lua
 
 Force user to specify account name, no default accounts are allowed.
 
-### require_gpu.lua
+### require\_gpu.lua
 
 Require GPUs for jobs, except non-GPU partitions, reject a job otherwise.
 
-### restrict_interactive.lua
+### restrict\_interactive.lua
 
 This plugin forbids running or restricts max time for batch jobs in interactive partitions.
 List of such partitions is specified in file `/etc/slurm/interactive_partitions`.
